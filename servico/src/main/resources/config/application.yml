@@ -3,4 +3,4 @@ server:
 
 application:
   module:
-    obesidade: http://localhost:8081/api/obesidade
+    obesidade: http://localhost:8081
