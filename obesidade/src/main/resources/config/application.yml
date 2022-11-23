@@ -1,0 +1,6 @@
+server:
+  port: 8081
+
+application:
+  module:
+    servico: http://localhost:8080/api/documento

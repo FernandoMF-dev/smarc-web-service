@@ -1,0 +1,6 @@
+server:
+  port: 8080
+
+application:
+  module:
+    obesidade: http://localhost:8081/api/obesidade

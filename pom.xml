@@ -18,6 +18,7 @@
 
 	<modules>
 		<module>servico</module>
+		<module>obesidade</module>
 	</modules>
 
 	<properties>
