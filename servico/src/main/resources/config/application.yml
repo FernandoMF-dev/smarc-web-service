@@ -6,3 +6,4 @@ application:
     obesidade: http://localhost:8081
     sedentarismo: http://localhost:8082
     tabagismo: http://localhost:8083
+    pressao: http://localhost:8084
