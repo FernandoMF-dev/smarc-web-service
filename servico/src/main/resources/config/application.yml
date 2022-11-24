@@ -4,3 +4,4 @@ server:
 application:
   module:
     obesidade: http://localhost:8081
+    sedentarismo: http://localhost:8082

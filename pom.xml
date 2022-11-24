@@ -14,11 +14,12 @@
 	<version>0.0.1</version>
 	<packaging>pom</packaging>
 	<name>SMARC - Parent</name>
-	<description>RSistema Multiagente Avaliador de Risco Cardíaco</description>
+	<description>Sistema Multiagente Avaliador de Risco Cardíaco</description>
 
 	<modules>
 		<module>servico</module>
 		<module>obesidade</module>
+		<module>sedentarismo</module>
 	</modules>
 
 	<properties>
