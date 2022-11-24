@@ -20,6 +20,7 @@
 		<module>servico</module>
 		<module>obesidade</module>
 		<module>sedentarismo</module>
+		<module>tabagismo</module>
 	</modules>
 
 	<properties>
