@@ -2,6 +2,7 @@ package br.com.ifes.com.smarc.servico.web.rest;
 
 import br.com.ifes.com.smarc.servico.model.AgenteObesidadeModel;
 import br.com.ifes.com.smarc.servico.model.AgenteSedentarismoModel;
+import br.com.ifes.com.smarc.servico.model.AgenteTabagismoModel;
 import br.com.ifes.com.smarc.servico.service.SmarcService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -40,6 +41,12 @@ public class SmarcResource {
 	public ResponseEntity<AgenteSedentarismoModel> agenteSedentarismo(@Valid @RequestBody AgenteSedentarismoModel agenteSedentarismoModel) {
 		log.info("SMARC: Mandando informações para o Agente de Sedentarismo...");
 		return ResponseEntity.status(HttpStatus.OK).body(smarcService.resultadoAgenteSedentarismo(agenteSedentarismoModel));
+	}
+
+	@PostMapping("/tabagismo")
+	public ResponseEntity<AgenteTabagismoModel> agenteTabagismo(@Valid @RequestBody AgenteTabagismoModel agenteTabagismoModel) {
+		log.info("SMARC: Mandando informações para o Agente de Tabagismo...");
+		return ResponseEntity.status(HttpStatus.OK).body(smarcService.resultadoAgenteTabagismo(agenteTabagismoModel));
 	}
 
 }
