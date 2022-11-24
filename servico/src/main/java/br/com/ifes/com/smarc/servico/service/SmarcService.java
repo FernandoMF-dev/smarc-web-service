@@ -1,7 +1,9 @@
 package br.com.ifes.com.smarc.servico.service;
 
 import br.com.ifes.com.smarc.servico.model.AgenteObesidadeModel;
+import br.com.ifes.com.smarc.servico.model.AgenteSedentarismoModel;
 import br.com.ifes.com.smarc.servico.web.client.ObesidadeClient;
+import br.com.ifes.com.smarc.servico.web.client.SedentarismoClient;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -13,12 +15,18 @@ public class SmarcService {
 
 	private final ObesidadeClient obesidadeClient;
 
+	private final SedentarismoClient sedentarismoClient;
+
 	public void teste() {
 		obesidadeClient.teste();
 	}
 
 	public AgenteObesidadeModel resultadoAgenteObesidade(AgenteObesidadeModel agenteObesidadeModel) {
 		return obesidadeClient.calcularResultado(agenteObesidadeModel);
+	}
+
+	public AgenteSedentarismoModel resultadoAgenteSedentarismo(AgenteSedentarismoModel agenteSedentarismoModel) {
+		return sedentarismoClient.calcularResultado(agenteSedentarismoModel);
 	}
 
 }

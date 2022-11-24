@@ -1,6 +1,7 @@
 package br.com.ifes.com.smarc.servico.web.rest;
 
 import br.com.ifes.com.smarc.servico.model.AgenteObesidadeModel;
+import br.com.ifes.com.smarc.servico.model.AgenteSedentarismoModel;
 import br.com.ifes.com.smarc.servico.service.SmarcService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -31,8 +32,14 @@ public class SmarcResource {
 
 	@PostMapping("/obesidade")
 	public ResponseEntity<AgenteObesidadeModel> agenteObesidade(@Valid @RequestBody AgenteObesidadeModel agenteObesidadeModel) {
-		log.info("Mandando informações para o Agente de Obesidade...");
+		log.info("SMARC: Mandando informações para o Agente de Obesidade...");
 		return ResponseEntity.status(HttpStatus.OK).body(smarcService.resultadoAgenteObesidade(agenteObesidadeModel));
+	}
+
+	@PostMapping("/sedentarismo")
+	public ResponseEntity<AgenteSedentarismoModel> agenteSedentarismo(@Valid @RequestBody AgenteSedentarismoModel agenteSedentarismoModel) {
+		log.info("SMARC: Mandando informações para o Agente de Sedentarismo...");
+		return ResponseEntity.status(HttpStatus.OK).body(smarcService.resultadoAgenteSedentarismo(agenteSedentarismoModel));
 	}
 
 }
