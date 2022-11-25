@@ -5,6 +5,8 @@ import br.com.ifes.com.smarc.servico.domain.entities.AgentePressaoDiastolica;
 import br.com.ifes.com.smarc.servico.domain.entities.AgentePressaoSistolica;
 import br.com.ifes.com.smarc.servico.domain.entities.AgenteSedentarismo;
 import br.com.ifes.com.smarc.servico.domain.entities.AgenteTabagismo;
+import br.com.ifes.com.smarc.servico.domain.entities.AvaliacaoInput;
+import br.com.ifes.com.smarc.servico.domain.entities.AvaliacaoOutput;
 import br.com.ifes.com.smarc.servico.service.SmarcService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -24,6 +26,12 @@ import javax.validation.Valid;
 public class SmarcResource {
 
 	private final SmarcService smarcService;
+
+	@PostMapping()
+	public ResponseEntity<AvaliacaoOutput> avaliarRiscoCardiologico(@Valid @RequestBody AvaliacaoInput input) {
+		log.info("SMARC: Requisição para avaliar o risco cardiológico");
+		return ResponseEntity.status(HttpStatus.OK).body(smarcService.avaliarRiscoCardiologico(input));
+	}
 
 	@PostMapping("/obesidade")
 	public ResponseEntity<AgenteObesidade> agenteObesidade(@Valid @RequestBody AgenteObesidade agenteObesidade) {
