@@ -18,11 +18,8 @@ import org.springframework.transaction.annotation.Transactional;
 public class SmarcService {
 
 	private final ObesidadeClient obesidadeClient;
-
 	private final SedentarismoClient sedentarismoClient;
-
 	private final TabagismoClient tabagismoClient;
-
 	private final PressaoSistolicaClient pressaoSistolicaClient;
 
 	public AgenteObesidade resultadoAgenteObesidade(AgenteObesidade agenteObesidade) {
