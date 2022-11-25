@@ -7,3 +7,4 @@ application:
     sedentarismo: http://localhost:8082
     tabagismo: http://localhost:8083
     pressaosistolica: http://localhost:8084
+    pressaodiastolica: http://localhost:8085

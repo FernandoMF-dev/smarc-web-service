@@ -22,6 +22,7 @@
 		<module>sedentarismo</module>
 		<module>tabagismo</module>
 		<module>pressaosistolica</module>
+		<module>pressaodiastolica</module>
 	</modules>
 
 	<properties>
