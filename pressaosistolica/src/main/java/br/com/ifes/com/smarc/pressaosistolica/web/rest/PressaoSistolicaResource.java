@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 @Slf4j
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/api/pressaosistolica")
+@RequestMapping("/api/pressao-sistolica")
 public class PressaoSistolicaResource {
 
 	private final PressaoSistolicaService pressaoSistolicaService;

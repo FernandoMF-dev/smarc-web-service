@@ -43,13 +43,13 @@ public class SmarcResource {
 		return ResponseEntity.status(HttpStatus.OK).body(smarcService.resultadoAgenteTabagismo(agenteTabagismo));
 	}
 
-	@PostMapping("/pressaosistolica")
+	@PostMapping("/pressao-sistolica")
 	public ResponseEntity<AgentePressaoSistolica> agentePressaoSistolica(@Valid @RequestBody AgentePressaoSistolica agentePressaoSistolica) {
 		log.info("SMARC: Mandando informações para o Agente de Pressão Sistólica...");
 		return ResponseEntity.status(HttpStatus.OK).body(smarcService.resultadoAgentePressaoSistolica(agentePressaoSistolica));
 	}
 
-	@PostMapping("/pressaodiastolica")
+	@PostMapping("/pressao-diastolica")
 	public ResponseEntity<AgentePressaoDiastolica> agentePressaoSistolica(@Valid @RequestBody AgentePressaoDiastolica agentePressaoDiastolica) {
 		log.info("SMARC: Mandando informações para o Agente de Pressão Diastólica...");
 		return ResponseEntity.status(HttpStatus.OK).body(smarcService.resultadoAgentePressaoDiastolica(agentePressaoDiastolica));
