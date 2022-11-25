@@ -1,6 +1,7 @@
 package br.com.ifes.com.smarc.servico.web.rest;
 
 import br.com.ifes.com.smarc.servico.domain.entities.AgenteObesidade;
+import br.com.ifes.com.smarc.servico.domain.entities.AgentePressaoDiastolica;
 import br.com.ifes.com.smarc.servico.domain.entities.AgentePressaoSistolica;
 import br.com.ifes.com.smarc.servico.domain.entities.AgenteSedentarismo;
 import br.com.ifes.com.smarc.servico.domain.entities.AgenteTabagismo;
@@ -46,6 +47,12 @@ public class SmarcResource {
 	public ResponseEntity<AgentePressaoSistolica> agentePressaoSistolica(@Valid @RequestBody AgentePressaoSistolica agentePressaoSistolica) {
 		log.info("SMARC: Mandando informações para o Agente de Pressão Sistólica...");
 		return ResponseEntity.status(HttpStatus.OK).body(smarcService.resultadoAgentePressaoSistolica(agentePressaoSistolica));
+	}
+
+	@PostMapping("/pressaodiastolica")
+	public ResponseEntity<AgentePressaoDiastolica> agentePressaoSistolica(@Valid @RequestBody AgentePressaoDiastolica agentePressaoDiastolica) {
+		log.info("SMARC: Mandando informações para o Agente de Pressão Diastólica...");
+		return ResponseEntity.status(HttpStatus.OK).body(smarcService.resultadoAgentePressaoDiastolica(agentePressaoDiastolica));
 	}
 
 }
