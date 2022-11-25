@@ -1,6 +1,6 @@
 package br.com.ifes.com.smarc.pressaosistolica.service;
 
-import br.com.ifes.com.smarc.pressaosistolica.model.AgentePressaoSistolica;
+import br.com.ifes.com.smarc.pressaosistolica.domain.entities.AgentePressaoSistolica;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -8,7 +8,7 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 @Transactional
 @RequiredArgsConstructor
-public class PressaoSistolicaServico {
+public class PressaoSistolicaService {
 
 	public AgentePressaoSistolica calcularResultado(AgentePressaoSistolica agentePressaoSistolica) {
 		if (agentePressaoSistolica.getPressaoSistolica() <= 120) {

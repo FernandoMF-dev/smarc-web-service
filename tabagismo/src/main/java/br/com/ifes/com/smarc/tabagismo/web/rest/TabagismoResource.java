@@ -1,7 +1,7 @@
 package br.com.ifes.com.smarc.tabagismo.web.rest;
 
-import br.com.ifes.com.smarc.tabagismo.model.AgenteTabagismoModel;
-import br.com.ifes.com.smarc.tabagismo.service.TabagismoServico;
+import br.com.ifes.com.smarc.tabagismo.domain.entities.AgenteTabagismo;
+import br.com.ifes.com.smarc.tabagismo.service.TabagismoService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
@@ -17,12 +17,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/tabagismo")
 public class TabagismoResource {
 
-	private final TabagismoServico tabagismoServico;
+	private final TabagismoService tabagismoService;
 
 	@PostMapping
-	public ResponseEntity<AgenteTabagismoModel> calcularResultado(@RequestBody AgenteTabagismoModel agenteTabagismoModel) {
+	public ResponseEntity<AgenteTabagismo> calcularResultado(@RequestBody AgenteTabagismo agenteTabagismo) {
 		log.info("Agente de Tabagismo: Calculando resultado...");
-		return ResponseEntity.status(HttpStatus.OK).body(tabagismoServico.calcularResultado(agenteTabagismoModel));
+		return ResponseEntity.status(HttpStatus.OK).body(tabagismoService.calcularResultado(agenteTabagismo));
 	}
 
 }

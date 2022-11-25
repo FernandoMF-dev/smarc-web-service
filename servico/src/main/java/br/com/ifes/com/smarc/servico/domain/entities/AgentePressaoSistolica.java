@@ -1,4 +1,4 @@
-package br.com.ifes.com.smarc.servico.model;
+package br.com.ifes.com.smarc.servico.domain.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

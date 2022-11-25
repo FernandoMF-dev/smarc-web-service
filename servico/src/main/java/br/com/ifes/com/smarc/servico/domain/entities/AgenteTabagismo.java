@@ -1,4 +1,4 @@
-package br.com.ifes.com.smarc.servico.model;
+package br.com.ifes.com.smarc.servico.domain.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -12,7 +12,7 @@ import java.io.Serializable;
 @AllArgsConstructor
 @Getter
 @Setter
-public class AgenteTabagismoModel implements Serializable {
+public class AgenteTabagismo implements Serializable {
 
 	@NotNull(message = "O campo minutos após acordar em que se fuma o primeiro cigarro não pode ser nulo!")
 	private Integer minutosAposAcordarPrimeiroCigarro;

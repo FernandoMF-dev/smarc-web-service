@@ -1,4 +1,4 @@
-package br.com.ifes.com.smarc.obesidade.model;
+package br.com.ifes.com.smarc.pressaosistolica.domain.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -7,17 +7,13 @@ import lombok.Setter;
 
 import java.io.Serializable;
 
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 @Getter
 @Setter
-public class AgenteObesidadeModel implements Serializable {
+public class AgentePressaoSistolica implements Serializable {
 
-	private Double altura;
-
-	private Double peso;
-
-	private Double imc;
+	private Double pressaoSistolica;
 
 	private Double resultado;
 

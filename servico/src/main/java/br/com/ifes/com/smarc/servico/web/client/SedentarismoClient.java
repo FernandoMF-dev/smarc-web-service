@@ -1,6 +1,6 @@
 package br.com.ifes.com.smarc.servico.web.client;
 
-import br.com.ifes.com.smarc.servico.model.AgenteSedentarismoModel;
+import br.com.ifes.com.smarc.servico.domain.entities.AgenteSedentarismo;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;
 
@@ -8,6 +8,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 public interface SedentarismoClient {
 
 	@PostMapping()
-	AgenteSedentarismoModel calcularResultado(AgenteSedentarismoModel agenteSedentarismoModel);
+	AgenteSedentarismo calcularResultado(AgenteSedentarismo agenteSedentarismo);
 
 }

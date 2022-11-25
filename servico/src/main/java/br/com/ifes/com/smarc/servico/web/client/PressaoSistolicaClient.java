@@ -1,6 +1,6 @@
 package br.com.ifes.com.smarc.servico.web.client;
 
-import br.com.ifes.com.smarc.servico.model.AgentePressaoSistolica;
+import br.com.ifes.com.smarc.servico.domain.entities.AgentePressaoSistolica;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;
 

@@ -1,4 +1,4 @@
-package br.com.ifes.com.smarc.pressaosistolica.model;
+package br.com.ifes.com.smarc.sedentarismo.domain.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -7,13 +7,13 @@ import lombok.Setter;
 
 import java.io.Serializable;
 
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
 @Getter
 @Setter
-public class AgentePressaoSistolica implements Serializable {
+public class AgenteSedentarismo implements Serializable {
 
-	private Double pressaoSistolica;
+	private Integer frequenciaAtividadeFisicaSemana;
 
 	private Double resultado;
 

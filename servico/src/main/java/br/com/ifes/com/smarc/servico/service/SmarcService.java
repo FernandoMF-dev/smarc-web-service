@@ -1,9 +1,9 @@
 package br.com.ifes.com.smarc.servico.service;
 
-import br.com.ifes.com.smarc.servico.model.AgenteObesidadeModel;
-import br.com.ifes.com.smarc.servico.model.AgentePressaoSistolica;
-import br.com.ifes.com.smarc.servico.model.AgenteSedentarismoModel;
-import br.com.ifes.com.smarc.servico.model.AgenteTabagismoModel;
+import br.com.ifes.com.smarc.servico.domain.entities.AgenteObesidade;
+import br.com.ifes.com.smarc.servico.domain.entities.AgentePressaoSistolica;
+import br.com.ifes.com.smarc.servico.domain.entities.AgenteSedentarismo;
+import br.com.ifes.com.smarc.servico.domain.entities.AgenteTabagismo;
 import br.com.ifes.com.smarc.servico.web.client.ObesidadeClient;
 import br.com.ifes.com.smarc.servico.web.client.PressaoSistolicaClient;
 import br.com.ifes.com.smarc.servico.web.client.SedentarismoClient;
@@ -25,20 +25,16 @@ public class SmarcService {
 
 	private final PressaoSistolicaClient pressaoSistolicaClient;
 
-	public void teste() {
-		obesidadeClient.teste();
+	public AgenteObesidade resultadoAgenteObesidade(AgenteObesidade agenteObesidade) {
+		return obesidadeClient.calcularResultado(agenteObesidade);
 	}
 
-	public AgenteObesidadeModel resultadoAgenteObesidade(AgenteObesidadeModel agenteObesidadeModel) {
-		return obesidadeClient.calcularResultado(agenteObesidadeModel);
+	public AgenteSedentarismo resultadoAgenteSedentarismo(AgenteSedentarismo agenteSedentarismo) {
+		return sedentarismoClient.calcularResultado(agenteSedentarismo);
 	}
 
-	public AgenteSedentarismoModel resultadoAgenteSedentarismo(AgenteSedentarismoModel agenteSedentarismoModel) {
-		return sedentarismoClient.calcularResultado(agenteSedentarismoModel);
-	}
-
-	public AgenteTabagismoModel resultadoAgenteTabagismo(AgenteTabagismoModel agenteTabagismoModel) {
-		return tabagismoClient.calcularResultado(agenteTabagismoModel);
+	public AgenteTabagismo resultadoAgenteTabagismo(AgenteTabagismo agenteTabagismo) {
+		return tabagismoClient.calcularResultado(agenteTabagismo);
 	}
 
 	public AgentePressaoSistolica resultadoAgentePressaoSistolica(AgentePressaoSistolica agentePressaoSistolica) {

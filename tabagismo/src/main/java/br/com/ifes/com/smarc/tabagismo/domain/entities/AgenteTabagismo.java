@@ -1,4 +1,4 @@
-package br.com.ifes.com.smarc.tabagismo.model;
+package br.com.ifes.com.smarc.tabagismo.domain.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -11,7 +11,7 @@ import java.io.Serializable;
 @AllArgsConstructor
 @Getter
 @Setter
-public class AgenteTabagismoModel implements Serializable {
+public class AgenteTabagismo implements Serializable {
 
 	private Integer minutosAposAcordarPrimeiroCigarro;
 

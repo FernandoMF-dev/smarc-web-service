@@ -1,7 +1,7 @@
 package br.com.ifes.com.smarc.pressaosistolica.web.rest;
 
-import br.com.ifes.com.smarc.pressaosistolica.model.AgentePressaoSistolica;
-import br.com.ifes.com.smarc.pressaosistolica.service.PressaoSistolicaServico;
+import br.com.ifes.com.smarc.pressaosistolica.domain.entities.AgentePressaoSistolica;
+import br.com.ifes.com.smarc.pressaosistolica.service.PressaoSistolicaService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
@@ -17,12 +17,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/pressaosistolica")
 public class PressaoSistolicaResource {
 
-	private final PressaoSistolicaServico pressaoSistolicaServico;
+	private final PressaoSistolicaService pressaoSistolicaService;
 
 	@PostMapping
 	public ResponseEntity<AgentePressaoSistolica> calcularResultado(@RequestBody AgentePressaoSistolica agentePressaoSistolica) {
 		log.info("Agente de Pressão Sistólica: Calculando resultado...");
-		return ResponseEntity.status(HttpStatus.OK).body(pressaoSistolicaServico.calcularResultado(agentePressaoSistolica));
+		return ResponseEntity.status(HttpStatus.OK).body(pressaoSistolicaService.calcularResultado(agentePressaoSistolica));
 	}
 
 }

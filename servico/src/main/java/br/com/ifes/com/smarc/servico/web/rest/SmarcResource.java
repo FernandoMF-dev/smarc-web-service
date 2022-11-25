@@ -1,15 +1,14 @@
 package br.com.ifes.com.smarc.servico.web.rest;
 
-import br.com.ifes.com.smarc.servico.model.AgenteObesidadeModel;
-import br.com.ifes.com.smarc.servico.model.AgentePressaoSistolica;
-import br.com.ifes.com.smarc.servico.model.AgenteSedentarismoModel;
-import br.com.ifes.com.smarc.servico.model.AgenteTabagismoModel;
+import br.com.ifes.com.smarc.servico.domain.entities.AgenteObesidade;
+import br.com.ifes.com.smarc.servico.domain.entities.AgentePressaoSistolica;
+import br.com.ifes.com.smarc.servico.domain.entities.AgenteSedentarismo;
+import br.com.ifes.com.smarc.servico.domain.entities.AgenteTabagismo;
 import br.com.ifes.com.smarc.servico.service.SmarcService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -25,29 +24,22 @@ public class SmarcResource {
 
 	private final SmarcService smarcService;
 
-	@GetMapping
-	public ResponseEntity<Void> teste() {
-		log.info("Requisição TESTE");
-		smarcService.teste();
-		return ResponseEntity.ok().build();
-	}
-
 	@PostMapping("/obesidade")
-	public ResponseEntity<AgenteObesidadeModel> agenteObesidade(@Valid @RequestBody AgenteObesidadeModel agenteObesidadeModel) {
+	public ResponseEntity<AgenteObesidade> agenteObesidade(@Valid @RequestBody AgenteObesidade agenteObesidade) {
 		log.info("SMARC: Mandando informações para o Agente de Obesidade...");
-		return ResponseEntity.status(HttpStatus.OK).body(smarcService.resultadoAgenteObesidade(agenteObesidadeModel));
+		return ResponseEntity.status(HttpStatus.OK).body(smarcService.resultadoAgenteObesidade(agenteObesidade));
 	}
 
 	@PostMapping("/sedentarismo")
-	public ResponseEntity<AgenteSedentarismoModel> agenteSedentarismo(@Valid @RequestBody AgenteSedentarismoModel agenteSedentarismoModel) {
+	public ResponseEntity<AgenteSedentarismo> agenteSedentarismo(@Valid @RequestBody AgenteSedentarismo agenteSedentarismo) {
 		log.info("SMARC: Mandando informações para o Agente de Sedentarismo...");
-		return ResponseEntity.status(HttpStatus.OK).body(smarcService.resultadoAgenteSedentarismo(agenteSedentarismoModel));
+		return ResponseEntity.status(HttpStatus.OK).body(smarcService.resultadoAgenteSedentarismo(agenteSedentarismo));
 	}
 
 	@PostMapping("/tabagismo")
-	public ResponseEntity<AgenteTabagismoModel> agenteTabagismo(@Valid @RequestBody AgenteTabagismoModel agenteTabagismoModel) {
+	public ResponseEntity<AgenteTabagismo> agenteTabagismo(@Valid @RequestBody AgenteTabagismo agenteTabagismo) {
 		log.info("SMARC: Mandando informações para o Agente de Tabagismo...");
-		return ResponseEntity.status(HttpStatus.OK).body(smarcService.resultadoAgenteTabagismo(agenteTabagismoModel));
+		return ResponseEntity.status(HttpStatus.OK).body(smarcService.resultadoAgenteTabagismo(agenteTabagismo));
 	}
 
 	@PostMapping("/pressaosistolica")

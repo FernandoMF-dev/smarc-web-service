@@ -1,4 +1,4 @@
-package br.com.ifes.com.smarc.servico.model;
+package br.com.ifes.com.smarc.servico.domain.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -12,7 +12,7 @@ import java.io.Serializable;
 @NoArgsConstructor
 @Getter
 @Setter
-public class AgenteSedentarismoModel implements Serializable {
+public class AgenteSedentarismo implements Serializable {
 
 	@NotNull(message = "O campo frequência de atividade física durante a semana não pode ser nulo!")
 	private Integer frequenciaAtividadeFisicaSemana;
