@@ -9,10 +9,10 @@
 		<version>0.0.1</version>
 	</parent>
 
-	<artifactId>pressao</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>SMARC - Agente de Pressao Arterial</name>
-	<description>Agente avaliador da pressão arterial</description>
+	<artifactId>pressaosistolica</artifactId>
+	<version>0.0.1</version>
+	<name>SMARC - Agente de Pressao Sistólica</name>
+	<description>Agente avaliador da pressão sistólica</description>
 
 	<properties>
 	</properties>
