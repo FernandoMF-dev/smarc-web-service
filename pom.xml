@@ -21,6 +21,7 @@
 		<module>obesidade</module>
 		<module>sedentarismo</module>
 		<module>tabagismo</module>
+		<module>pressaosistolica</module>
 	</modules>
 
 	<properties>

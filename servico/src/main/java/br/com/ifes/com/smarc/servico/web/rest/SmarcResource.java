@@ -1,6 +1,7 @@
 package br.com.ifes.com.smarc.servico.web.rest;
 
 import br.com.ifes.com.smarc.servico.model.AgenteObesidadeModel;
+import br.com.ifes.com.smarc.servico.model.AgentePressaoSistolica;
 import br.com.ifes.com.smarc.servico.model.AgenteSedentarismoModel;
 import br.com.ifes.com.smarc.servico.model.AgenteTabagismoModel;
 import br.com.ifes.com.smarc.servico.service.SmarcService;
@@ -47,6 +48,12 @@ public class SmarcResource {
 	public ResponseEntity<AgenteTabagismoModel> agenteTabagismo(@Valid @RequestBody AgenteTabagismoModel agenteTabagismoModel) {
 		log.info("SMARC: Mandando informações para o Agente de Tabagismo...");
 		return ResponseEntity.status(HttpStatus.OK).body(smarcService.resultadoAgenteTabagismo(agenteTabagismoModel));
+	}
+
+	@PostMapping("/pressaosistolica")
+	public ResponseEntity<AgentePressaoSistolica> agentePressaoSistolica(@Valid @RequestBody AgentePressaoSistolica agentePressaoSistolica) {
+		log.info("SMARC: Mandando informações para o Agente de Pressão Sistólica...");
+		return ResponseEntity.status(HttpStatus.OK).body(smarcService.resultadoAgentePressaoSistolica(agentePressaoSistolica));
 	}
 
 }
