@@ -21,7 +21,7 @@ public class PressaoSistolicaResource {
 
 	@PostMapping
 	public ResponseEntity<AgentePressaoSistolica> calcularResultado(@RequestBody AgentePressaoSistolica agentePressaoSistolica) {
-		log.info("Agente de Pressão Sistólica: Calculando resultado...");
+		log.info("Agente de Pressão Sistólica: Requisição para calcular o indicador de risco de alta pressão sistólica.");
 		return ResponseEntity.status(HttpStatus.OK).body(pressaoSistolicaService.calcularResultado(agentePressaoSistolica));
 	}
 

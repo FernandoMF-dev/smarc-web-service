@@ -21,7 +21,7 @@ public class TabagismoResource {
 
 	@PostMapping
 	public ResponseEntity<AgenteTabagismo> calcularResultado(@RequestBody AgenteTabagismo agenteTabagismo) {
-		log.info("Agente de Tabagismo: Calculando resultado...");
+		log.info("Agente de Tabagismo: Requisição para calcular o indicador de risco de tabagismo.");
 		return ResponseEntity.status(HttpStatus.OK).body(tabagismoService.calcularResultado(agenteTabagismo));
 	}
 

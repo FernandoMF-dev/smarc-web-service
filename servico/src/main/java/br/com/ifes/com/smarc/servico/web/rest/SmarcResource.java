@@ -29,37 +29,37 @@ public class SmarcResource {
 
 	@PostMapping()
 	public ResponseEntity<AvaliacaoOutput> avaliarRiscoCardiologico(@Valid @RequestBody AvaliacaoInput input) {
-		log.info("SMARC: Requisição para avaliar o risco cardiológico");
+		log.info("SMARC: Requisição para avaliar risco cardiológico com base no algorítmo para-analisador da LPA2v.");
 		return ResponseEntity.status(HttpStatus.OK).body(smarcService.avaliarRiscoCardiologico(input));
 	}
 
 	@PostMapping("/obesidade")
 	public ResponseEntity<AgenteObesidade> agenteObesidade(@Valid @RequestBody AgenteObesidade agenteObesidade) {
-		log.info("SMARC: Mandando informações para o Agente de Obesidade...");
+		log.info("SMARC: Requisição para calcular o indicador de risco de obesidade grave.");
 		return ResponseEntity.status(HttpStatus.OK).body(smarcService.resultadoAgenteObesidade(agenteObesidade));
 	}
 
 	@PostMapping("/sedentarismo")
 	public ResponseEntity<AgenteSedentarismo> agenteSedentarismo(@Valid @RequestBody AgenteSedentarismo agenteSedentarismo) {
-		log.info("SMARC: Mandando informações para o Agente de Sedentarismo...");
+		log.info("SMARC: Requisição para calcular o indicador de risco de sedentarismo.");
 		return ResponseEntity.status(HttpStatus.OK).body(smarcService.resultadoAgenteSedentarismo(agenteSedentarismo));
 	}
 
 	@PostMapping("/tabagismo")
 	public ResponseEntity<AgenteTabagismo> agenteTabagismo(@Valid @RequestBody AgenteTabagismo agenteTabagismo) {
-		log.info("SMARC: Mandando informações para o Agente de Tabagismo...");
+		log.info("SMARC: Requisição para calcular o indicador de risco de tabagismo.");
 		return ResponseEntity.status(HttpStatus.OK).body(smarcService.resultadoAgenteTabagismo(agenteTabagismo));
 	}
 
 	@PostMapping("/pressao-sistolica")
 	public ResponseEntity<AgentePressaoSistolica> agentePressaoSistolica(@Valid @RequestBody AgentePressaoSistolica agentePressaoSistolica) {
-		log.info("SMARC: Mandando informações para o Agente de Pressão Sistólica...");
+		log.info("SMARC: Requisição para calcular o indicador de risco de alta pressão sistólica.");
 		return ResponseEntity.status(HttpStatus.OK).body(smarcService.resultadoAgentePressaoSistolica(agentePressaoSistolica));
 	}
 
 	@PostMapping("/pressao-diastolica")
 	public ResponseEntity<AgentePressaoDiastolica> agentePressaoSistolica(@Valid @RequestBody AgentePressaoDiastolica agentePressaoDiastolica) {
-		log.info("SMARC: Mandando informações para o Agente de Pressão Diastólica...");
+		log.info("SMARC: Requisição para calcular o indicador de risco de alta pressão diastólica.");
 		return ResponseEntity.status(HttpStatus.OK).body(smarcService.resultadoAgentePressaoDiastolica(agentePressaoDiastolica));
 	}
 

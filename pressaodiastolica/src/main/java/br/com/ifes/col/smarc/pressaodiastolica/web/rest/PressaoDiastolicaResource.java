@@ -21,7 +21,7 @@ public class PressaoDiastolicaResource {
 
 	@PostMapping
 	public ResponseEntity<AgentePressaoDiastolica> calcularResultado(@RequestBody AgentePressaoDiastolica agentePressaoSistolica) {
-		log.info("Requisição para calcular resultado da pressão diastólica");
+		log.info("Agente de Pressão Diastólica: Requisição para calcular o indicador de risco de alta pressão diastólica.");
 		return ResponseEntity.status(HttpStatus.OK).body(pressaoDiastolicaService.calcularResultado(agentePressaoSistolica));
 	}
 

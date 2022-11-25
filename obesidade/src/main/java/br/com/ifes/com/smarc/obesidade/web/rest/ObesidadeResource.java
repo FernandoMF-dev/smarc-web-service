@@ -21,7 +21,7 @@ public class ObesidadeResource {
 
 	@PostMapping
 	public ResponseEntity<AgenteObesidade> calcularResultado(@RequestBody AgenteObesidade agenteObesidade) {
-		log.info("Agente de Obesidade: Calculando resultado...");
+		log.info("Agente de Obesidade: Requisição para calcular o indicador de risco de obesidade grave.");
 		return ResponseEntity.status(HttpStatus.OK).body(obesidadeService.calcularResultado(agenteObesidade));
 	}
 

@@ -21,7 +21,7 @@ public class SedentarismoResource {
 
 	@PostMapping
 	public ResponseEntity<AgenteSedentarismo> calcularResultado(@RequestBody AgenteSedentarismo agenteSedentarismo) {
-		log.info("Agente de Sedentarismo: Calculando resultado...");
+		log.info("Agente de Sedentarismo: Requisição para calcular o indicador de risco de sedentarismo.");
 		return ResponseEntity.status(HttpStatus.OK).body(sedentarismoService.calcularResultado(agenteSedentarismo));
 	}
 
